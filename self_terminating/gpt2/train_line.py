@@ -326,7 +326,6 @@ def main():
 
     model, tokenizer = load_model(args, device)
     tokenizer.add_special_tokens({'pad_token': '<PAD>'})
-    import ipdb; ipdb.set_trace()
 
     raw_dataset_dict, line_datasets = utils.load_dataset(
         args.dataset_path, tokenizer.pad_token_id, args
